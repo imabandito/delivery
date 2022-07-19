@@ -1,0 +1,25 @@
+.shopsListWrapper {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shopsTitle {
+}
+
+.shopsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}

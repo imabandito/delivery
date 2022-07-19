@@ -1,0 +1,48 @@
+.dishesListContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dish {
+  max-width: 200px;
+  margin: 20px;
+  background: rgb(244, 244, 244);
+  border-radius: 10px;
+  border: 4px solid #000;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.imgContainer {
+  position: relative;
+  display: block;
+}
+
+.dish img {
+  display: block;
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+
+.dish button {
+  display: block;
+  width: 100%;
+  border: none;
+  /* border: 2px solid black; */
+  margin-top: auto;
+  font-weight: 700;
+  font-size: large;
+  background: rgb(217, 217, 217);
+  cursor: pointer;
+}
+
+.dish button:hover {
+  color: rgb(255, 96, 96);
+}

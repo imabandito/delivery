@@ -1,0 +1,11 @@
+.shopsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1000px) {
+  .shopsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
