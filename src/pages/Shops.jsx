@@ -7,6 +7,7 @@ import classes from "../styles/Shops.module.css";
 const Shops = ({ addDishesInCart }) => {
   const [shops, setShops] = useState([]);
   const [active, setActive] = useState("1");
+  const arr = [];
 
   useEffect(() => {
     if (!localStorage.getItem("shops")) {
@@ -20,21 +21,29 @@ const Shops = ({ addDishesInCart }) => {
       setShops([]);
     };
   }, []);
+  console.log(shops);
 
   const getShopsWrapper = async () => {
     await getShops("1", "Big Burger", "0", "10");
     await getShops("2", "Small Burger", "11", "10");
     await getShops("3", "Tiny Burger", "21", "10");
+    setShops(arr);
+    addToLocalStorage("shops", arr);
+  };
 
-    localStorage.setItem("shops", JSON.stringify([...shops]));
+  const addToLocalStorage = (name, elem) => {
+    console.log("getshops shops", elem);
+    localStorage.setItem(name, JSON.stringify([...elem]));
+    console.log(localStorage.getItem("shops"));
   };
 
   const getShops = async (id, name, start, limit) => {
     const response = await FoodService.getFood(start, limit);
-    setShops((prev) => [
-      ...prev,
-      { id: id, name: name, dishes: response.data.results },
-    ]);
+    arr.push({ id: id, name: name, dishes: response.data.results });
+    // setShops((prev) => [
+    //   ...prev,
+    //   { id: id, name: name, dishes: response.data.results },
+    // ]);
   };
 
   return (

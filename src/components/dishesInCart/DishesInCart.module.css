@@ -1,0 +1,35 @@
+.dishesWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dishWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  width: 30%;
+  height: 350px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dishWrapper img {
+  display: block;
+  max-height: 70%;
+  max-width: 100%;
+  object-fit: contain;
+}

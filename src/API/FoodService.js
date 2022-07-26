@@ -28,7 +28,7 @@ export default class FoodService {
       {
         headers: {
           "X-RapidAPI-Key":
-            "f1bf49e2f6mshb57b46df5338947p194571jsn4414f3e6dd2b",
+            "ceb80379b4msh3f9833f4b793914p115e67jsn2f2b2be37f45",
           "X-RapidAPI-Host": "tasty.p.rapidapi.com",
         },
         params: {
